@@ -1,0 +1,137 @@
+[{
+  "_id": {
+    "$oid": "6435dd925b6cd567af18f3f3"
+  },
+  "username": "admin",
+  "email": "admin@local.lab",
+  "password": "SecurePwd@1",
+  "subscribers": "0",
+  "level": "user",
+  "__v": 0,
+  "ccexp": "468",
+  "ccnumber": "123456789",
+  "cvc": "02/11"
+},{
+  "_id": {
+    "$oid": "6435e0575b6cd567af18f448"
+  },
+  "username": "david1998",
+  "email": "david@local.lab",
+  "password": "iloveyou",
+  "subscribers": "0",
+  "level": "user",
+  "__v": 0,
+  "ccexp": "02/26",
+  "ccnumber": "45664564564656",
+  "cvc": "717"
+},{
+  "_id": {
+    "$oid": "6435e06c5b6cd567af18f44b"
+  },
+  "username": "apisec",
+  "email": "apisec@local.lab",
+  "password": "Aa123456",
+  "subscribers": "0",
+  "level": "user",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6435e0885b6cd567af18f44e"
+  },
+  "username": "decode123",
+  "email": "decode123@local.lab",
+  "password": "ComplexPwd@1",
+  "subscribers": "0",
+  "level": "user",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6435e0955b6cd567af18f451"
+  },
+  "username": "r3alstart",
+  "email": "r3alstart@local.lab",
+  "password": "ComplexPwd@1",
+  "subscribers": "0",
+  "level": "user",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6435e0a15b6cd567af18f454"
+  },
+  "username": "hak4life",
+  "email": "h4k4life@local.lab",
+  "password": "ComplexPwd@1",
+  "subscribers": "0",
+  "level": "user",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6435e0b05b6cd567af18f457"
+  },
+  "username": "r0ttenGas",
+  "email": "r0tteng4s@local.lab",
+  "password": "ComplexPwd@1",
+  "subscribers": "0",
+  "level": "user",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6435e0c05b6cd567af18f45a"
+  },
+  "username": "agentM",
+  "email": "agentM@local.lab",
+  "password": "ComplexPwd@1",
+  "subscribers": "0",
+  "level": "user",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6435e0cd5b6cd567af18f45d"
+  },
+  "username": "dani3lr",
+  "email": "daniel34@local.lab",
+  "password": "ComplexPwd@1",
+  "subscribers": "0",
+  "level": "user",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6435e0dd5b6cd567af18f460"
+  },
+  "username": "mux879",
+  "email": "mux879@local.lab",
+  "password": "ComplexPwd@1",
+  "subscribers": "0",
+  "level": "user",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6435e0f25b6cd567af18f463"
+  },
+  "username": "redTe4m",
+  "email": "redTe4m@local.lab",
+  "password": "ComplexPwd@1",
+  "subscribers": "0",
+  "level": "user",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6435e1435b6cd567af18f478"
+  },
+  "username": "r34alTime",
+  "email": "r34alTime@local.lab",
+  "password": "ComplexPwd@1",
+  "subscribers": "0",
+  "level": "user",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6435e14e5b6cd567af18f47b"
+  },
+  "username": "ApiE4pert",
+  "email": "ApiE4pert@local.lab",
+  "password": "ComplexPwd@1",
+  "subscribers": "0",
+  "level": "user",
+  "__v": 0
+}]

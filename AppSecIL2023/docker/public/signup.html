@@ -1,0 +1,42 @@
+<main id="main">
+
+<div id="login">
+        <div class="container pt-3">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                            <h3 class="text-center">Signup</h3>
+                            <div ng-show="isErrorSignup" class="alert alert-danger">
+                                {{ msg }}
+                            </div>
+                            <br/><div ng-show="isOKSignupSignup" class="alert alert-success">
+                                Success! Account has been created. Please <u><a href="#" onclick="location.reload();">Login</a></u>.
+                            </div>
+                            <div ng-hide="isOKSignup" class="form-group">
+                                <label for="username">Username:</label><br>
+                                <input type="text" ng-model="usernameacc" id="username" class="form-control">
+                            </div>
+                            <div ng-hide="isOKSignup" class="form-group">
+                                <label for="password">Email:</label><br>
+                                <input type="text" ng-model="emailacc" id="text" class="form-control">
+                            </div>
+                            </div>
+                            <div ng-hide="isOKSignup" class="form-group">
+                                <label for="password">Password:</label><br>
+                                <input type="password" ng-model="passwordacc" id="password" class="form-control">
+                            </div>
+                            <div ng-hide="isOKSignup" class="form-group">
+                                <br/>
+                                <p><input type="submit" name="submit" ng-click="submitSignup();" class="btn btn-info btn-md" value="Open Account"></p>
+                            </div>
+                            <div ng-hide="isOKSignup" id="register-link" class="text-right">
+                                Already have an account? <a href="/#/login" style="text-decoration: underline;">Login here</a>
+                            </div>
+                    </div>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </main>

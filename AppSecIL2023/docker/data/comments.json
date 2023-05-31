@@ -1,0 +1,15 @@
+[{
+  "_id": {
+    "$oid": "6435e1cb5b6cd567af18f4b9"
+  },
+  "msg": "Sounds great! someday I will do same",
+  "postId": {
+    "$oid": "6435de175b6cd567af18f400"
+  },
+  "author": "hak4life",
+  "authorId": "6435e0a15b6cd567af18f454",
+  "publishDate": {
+    "$date": "2023-04-11T22:40:11.825Z"
+  },
+  "__v": 0
+}]

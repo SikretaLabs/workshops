@@ -1,0 +1,37 @@
+<main id="main">
+
+<div id="login">
+        <div class="container pt-3">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                            <h3 class="text-center">Members Login</h3>
+                            <div ng-show="isError" class="alert alert-danger">
+                                {{ msg }}
+                            </div>
+                            <div ng-show="isOK" class="alert alert-success">
+                                Success! You are currently logged in...
+                            </div>
+                            <div ng-hide="isOK" class="form-group">
+                                <label for="username">Username:</label><br>
+                                <input type="text" ng-model="username" id="username" class="form-control">
+                            </div>
+                            <div ng-hide="isOK" class="form-group">
+                                <label for="password">Password:</label><br>
+                                <input type="password" ng-model="password" id="password" class="form-control">
+                            </div>
+                            <div ng-hide="isOK" class="form-group">
+                                <br/>
+                                <p><input type="submit" name="submit" ng-click="submitLogin();" class="btn btn-info btn-md" value="Login"></p>
+                            </div>
+                            <div ng-hide="isOK" id="register-link" class="text-right">
+                            Don't have an account? <a href="/#/signup" style="text-decoration: underline;">Signup here</a> |  Forgot password? <a href="/#/resetpwd" style="text-decoration: underline;">click here</a>
+                            </div>
+                    </div>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </main>

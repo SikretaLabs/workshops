@@ -1,0 +1,63 @@
+
+<footer id="footer" class="footer">
+  
+  <div class="footer-content">
+    <div class="container">
+
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <h3 class="footer-heading">About CyBlog</h3>
+          <p>Discussion about Cyber Security and More!</p>
+          <p><strong>Company Address:</strong><br/>Foo Bar 23 St.<br/>Tel-Aviv Jaffo, P.O.B 92383</p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h3 class="footer-heading">Categories</h3>
+          <ul class="footer-links list-unstyled"   ng-repeat="cat in categories | limitTo:6">
+            <li><a href="/#/category/{{ cat._id }}"><i class="bi bi-chevron-right"></i> {{cat.title}}</a></li>
+
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h3 class="footer-heading">Top Members</h3>
+          <ul class="footer-links list-unstyled"   ng-repeat="user in users | limitTo:6">
+            <li><a href="/#/user/{{ user._id }}"><i class="bi bi-chevron-right"></i> {{user.username}}</a></li>
+
+          </ul>
+        </div>
+
+        <div class="col-lg-4">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-links list-unstyled">
+            <li><a href="/#/profile"><i class="bi bi-chevron-right"></i> Members Area</a></li>
+
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-legal">
+    <div class="container">
+
+      <div class="row justify-content-between">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          <div class="copyright">
+            © Copyright <strong><span>CyBlog</span></strong> 2023. All Rights Reserved | Lab Version: 1.0
+          </div>
+
+          <div class="credits">
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | Developed by <a href="https://sikreta.com/">Sikreta</a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</footer>
+
+<a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  </table>

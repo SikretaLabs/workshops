@@ -1,0 +1,57 @@
+<main id="main">
+
+<div id="login">
+        <div class="container pt-3">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12 pt-5 pb-5">
+                            <h3 class="text-left">My Profile</h3>
+                            <br/>
+                            <table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Username</th>
+      <th scope="col">Email</th>
+      <th scope="col">Subscribers</th>
+      <th scope="col">Level</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ profile.username }}</td>
+      <td>{{ profile.email }}</td>
+      <td>{{ profile.subscribers }}</td>
+      <td>{{ profile.level }}</td>
+    </tr>
+  </tbody>
+</table>
+<br/>
+<h3 class="text-left">My Billing Profile</h3>
+                            <br/>
+                            <p ng-hide="ccnum"><strong>No Billing Information updated. <a href="/#/billing" style="text-decoration:underline;">Click here</a> to update.</strong></p>
+                            <table ng-show="ccnum" class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Card Number</th>
+      <th scope="col">Exp. Date</th>
+      <th scope="col">Issuer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ ccnum }}</td>
+      <td>{{ exp }}</td>
+      <td>CreditCompany Ltd.</td>
+    </tr>
+  </tbody>
+</table>
+<br/>
+<button type="button" class="btn btn-primary" ng-click="pwd();" >Change Password</button> <button type="button" ng-click="up();" class="btn btn-primary">Update Profile</button> <button ng-click="logout();" type="button" class="btn btn-primary">Logout</button>
+                    </div>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </main>

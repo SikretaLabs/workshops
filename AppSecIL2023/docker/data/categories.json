@@ -1,0 +1,43 @@
+[{
+  "_id": {
+    "$oid": "642f34c53fc60e4fcdd40dce"
+  },
+  "title": "Cyber",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642f37393e6f945e47ebd6d5"
+  },
+  "title": "Startups & Hightec",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642f37453e6f945e47ebd6d8"
+  },
+  "title": "Human Enginnering",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642f374d3e6f945e47ebd6db"
+  },
+  "title": "BlackHat",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642f37563e6f945e47ebd6de"
+  },
+  "title": "Red Team",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642f375c3e6f945e47ebd6e1"
+  },
+  "title": "DevOps",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642f37663e6f945e47ebd6e4"
+  },
+  "title": "Cyber Insurance",
+  "__v": 0
+}]

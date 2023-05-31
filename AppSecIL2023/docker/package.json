@@ -1,0 +1,24 @@
+{
+  "name": "vulnspa-lab",
+  "version": "1.0.0",
+  "description": "owasp api security training by Sikreta.com",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --quiet index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Maor Tal",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-jwt": "^8.4.1",
+    "jsonwebtoken": "^9.0.0",
+    "mongodb": "^5.1.0",
+    "mongoose": "^7.0.3",
+    "nodemon": "^2.0.22",
+    "swagger-ui-express": "^4.6.2"
+  }
+}

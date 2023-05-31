@@ -1,0 +1,743 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "VulnSPA Blog",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Users"
+    },
+    {
+      "name": "Posts"
+    },
+    {
+      "name": "Backoffice Only"
+    }
+  ],
+  "paths": {
+    "/api/v2/dev/token": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "JWT Development Gen",
+        "requestBody": {
+          "content": {
+            "*/*": {
+              "schema": {
+                "type": "string",
+                "example": "\"{\\\"username\\\": \\\"demo@demo.com\\\"}\""
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "application/json"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/me/profile/card": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Update Credit Card",
+        "requestBody": {
+          "content": {
+            "*/*": {
+              "schema": {
+                "type": "string",
+                "example": "\"{\\r\\n    \\\"ccnumber\\\": \\\"123456789\\\",\\r\\n    \\\"ccexp\\\": \\\"468\\\",\\r\\n    \\\"cvc\\\": \\\"02/11\\\"\\r\\n}\""
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "application/json"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDM1YWM0NDZkMGRhODAyMWQ1MWJjZDMiLCJ1c2VybmFtZSI6Im1hb3IiLCJsZXZlbCI6InVzZXIiLCJpYXQiOjE2ODEyMzkxMTV9.2aTpIU3zKFadRfyDLGocj-n4Z6MkTamZiUeuukD2Fs4"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/signup": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Signup",
+        "requestBody": {
+          "content": {
+            "*/*": {
+              "schema": {
+                "type": "string",
+                "example": "\"{\\r\\n    \\\"username\\\": \\\"ApiE4pert\\\",\\r\\n    \\\"email\\\": \\\"ApiE4pert@local.lab\\\",\\r\\n    \\\"password\\\": \\\"ComplexPwd@1\\\"\\r\\n}\""
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "application/json"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/login": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Login",
+        "requestBody": {
+          "content": {
+            "*/*": {
+              "schema": {
+                "type": "string",
+                "example": "\"{\\r\\n    \\\"username\\\": \\\"admin\\\",\\r\\n    \\\"password\\\": \\\"SecurePwd@1\\\"\\r\\n}\""
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "application/json"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/me/profile": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Update Profile",
+        "requestBody": {
+          "content": {
+            "*/*": {
+              "schema": {
+                "type": "string",
+                "example": "\"{\\r\\n    \\\"email\\\": \\\"me@gssssssmail.com\\\"\\r\\n}\""
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "application/json"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDM1YmM3N2NkNjExMWEyM2ZlNjk4MTIiLCJ1c2VybmFtZSI6Im1hb3IiLCJsZXZlbCI6InVzZXIiLCJpYXQiOjE2ODEyNDMyNTksImV4cCI6MTcxMjc3OTI1OX0.GvCd5Latr7bGMmRTQRLGOM5hNEQ-MOD78c1fExDL-qs"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Get Profile",
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "application/json"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDM1YmM3N2NkNjExMWEyM2ZlNjk4MTIiLCJ1c2VybmFtZSI6Im1hb3IiLCJsZXZlbCI6InVzZXIiLCJpYXQiOjE2ODEyNDMyNTksImV4cCI6MTcxMjc3OTI1OX0.GvCd5Latr7bGMmRTQRLGOM5hNEQ-MOD78c1fExDL-qs"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/reset_pwd": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Forgot Password",
+        "requestBody": {
+          "content": {
+            "*/*": {
+              "schema": {
+                "type": "string",
+                "example": "\"{\\r\\n    \\\"username\\\": \\\"david\\\"\\r\\n}\""
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "application/json"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/me/password": {
+      "put": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Update Password",
+        "requestBody": {
+          "content": {
+            "*/*": {
+              "schema": {
+                "type": "string",
+                "example": "\"{\\r\\n    \\\"pwd\\\": \\\"Aa123456\\\",\\r\\n    \\\"email\\\": \\\"maor@demo.com\\\"\\r\\n}\""
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "application/json"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hb3IiLCJsZXZlbCI6InVzZXIiLCJpYXQiOjE2Nzk3NzQzODksImV4cCI6MTY3OTc3Nzk4OX0.FI6TQFV7eo8BxGd_cXsJWRoyYQWbX8JlHErTs_f3bXc"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/blog/users": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Get Users",
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "application/json"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/blog/users/6435dd925b6cd567af18f3f3": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Get Single User",
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "application/json"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/me/profile/card/6435dd925b6cd567af18f3f3": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Get Profile Billing",
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "application/json"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/posts/comments/6435deb15b6cd567af18f414": {
+      "get": {
+        "tags": [
+          "Posts"
+        ],
+        "summary": "Single Post Comments",
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "application/json"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/categories": {
+      "get": {
+        "tags": [
+          "Posts"
+        ],
+        "summary": "Categories Blog",
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "application/json"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/posts": {
+      "get": {
+        "tags": [
+          "Posts"
+        ],
+        "summary": "Blog Posts",
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "application/json"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "example": "1"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/posts/641feed3a0d451199495bc96": {
+      "get": {
+        "tags": [
+          "Posts"
+        ],
+        "summary": "Single Post",
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "application/json"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/posts/642f3e95d66bb610bd78618c/replay": {
+      "post": {
+        "tags": [
+          "Posts"
+        ],
+        "summary": "Post Comment",
+        "requestBody": {
+          "content": {
+            "*/*": {
+              "schema": {
+                "type": "string",
+                "example": "\"{\\r\\n    \\\"msg\\\": \\\"yo'ure rock!\\\"\\r\\n}\""
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "application/json"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hb3IiLCJsZXZlbCI6InVzZXIiLCJpYXQiOjE2ODA4MTcyODYsImV4cCI6MTY4MDgyMDg4Nn0.NUV1rmf987fGVfu8hiiJBHGD7I07IEtcsbpaXmyj4Pk"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/logging": {
+      "post": {
+        "tags": [
+          "Posts"
+        ],
+        "summary": "Log Event",
+        "requestBody": {
+          "content": {
+            "*/*": {
+              "schema": {
+                "type": "string",
+                "example": "\"{\\r\\n    \\\"event\\\": \\\"user view\\\"\\r\\n}\""
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "application/json"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/publish": {
+      "post": {
+        "tags": [
+          "Posts"
+        ],
+        "summary": "Create Post",
+        "requestBody": {
+          "content": {
+            "*/*": {
+              "schema": {
+                "type": "string",
+                "example": "\"{\\r\\n    \\\"title\\\": \\\"API Misconfiguration Risks\\\",\\r\\n    \\\"content\\\": \\\"APIs (Application Programming Interfaces) have become an essential part of modern web applications. They allow different applications to interact with each other and share data, making it easier to build complex systems. However, this increased connectivity also comes with an increased risk of security vulnerabilities, including API misconfigurations.\\\\n\\\\n An API misconfiguration attack occurs when an attacker exploits a vulnerability in the configuration of an API to gain unauthorized access to sensitive data or perform other malicious actions. These attacks can occur due to a range of configuration errors, such as misconfigured access controls, exposed credentials, or incorrect encryption settings.\\\\n\\\\n API misconfiguration attacks can have serious consequences, including data breaches, account takeovers, and even complete system compromise. Attackers can use the access gained through the API to perform additional attacks on the system or steal valuable data, such as user credentials or financial information.\\\\n\\\\n To prevent API misconfiguration attacks, it is essential to carefully review and configure the API settings and ensure that the API is designed with security in mind. This includes implementing strong authentication and authorization controls, ensuring that data is encrypted both in transit and at rest, and limiting access to sensitive data to only authorized parties.\\\\n\\\\n In addition to proactive measures, it is also important to regularly monitor API activity for suspicious behavior and to conduct regular security assessments to identify potential vulnerabilities. By taking these steps, organizations can help protect against API misconfiguration attacks and ensure the security of their web applications and sensitive data.\\\",\\r\\n    \\\"category\\\": \\\"Cyber\\\",\\r\\n    \\\"published\\\": true\\r\\n}\""
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "application/json"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDM1ZGQ5MjViNmNkNTY3YWYxOGYzZjMiLCJ1c2VybmFtZSI6ImFkbWluIiwibGV2ZWwiOiJ1c2VyIiwiaWF0IjoxNjgxMjUxNzU0LCJleHAiOjE3MTI3ODc3NTR9.Tum3qRawsnhsMzh6aC_UK_aM0bx6Sjj5tripbyt5D2E"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/admin/categories": {
+      "post": {
+        "tags": [
+          "Backoffice Only"
+        ],
+        "summary": "Add Category",
+        "requestBody": {
+          "content": {
+            "*/*": {
+              "schema": {
+                "type": "string",
+                "example": "\"{\\r\\n    \\\"title\\\": \\\"Cyber Insurance\\\"\\r\\n}\""
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "application/json"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/admin/posts/comments/641f67ed125c310e475af005": {
+      "delete": {
+        "tags": [
+          "Backoffice Only"
+        ],
+        "summary": "Delete Post Comments",
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "application/json"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/admin/posts/641f67ed125c310e475af005": {
+      "delete": {
+        "tags": [
+          "Backoffice Only"
+        ],
+        "summary": "Delete Blog Post",
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "application/json"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hb3IiLCJsZXZlbCI6InVzZXIiLCJpYXQiOjE2Nzk4MTI0MTEsImV4cCI6MTY3OTgxNjAxMX0.gMIoMVQnvu2eXnkbAkLvMTFX0FAIcYWWuXMPa66nmbs"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    }
+  }
+}

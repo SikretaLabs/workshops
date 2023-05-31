@@ -1,0 +1,70 @@
+<main id="main">
+
+<section class="single-post-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9 post-content" data-aos="fade-up">
+            <div class="single-post">
+              <div class="post-meta"><span class="date">{{ content.author }}</span> <span class="mx-1">&bullet;</span> <span>{{ content.publishDate | date:"MM/dd/yyyy" }}</span></div>
+              <h1 class="mb-5">{{ content.title }}</h1>
+              <p><span class="firstcharacter">{{ content.content[0] }}</span>{{ content.content.substring(1) }}</p>
+              <p>&nbsp;</p>
+            </div>
+
+            <div class="comments">
+              <h5 class="comment-title py-4">{{comments.length}} Comments</h5>
+              <div class="comment d-flex mb-4" ng-repeat="replay in comments">
+                <div class="flex-shrink-0">
+                  <div class="avatar avatar-sm rounded-circle">
+                    <img class="avatar-img" src="assets/img/person.png" alt="" class="img-fluid">
+                  </div>
+                </div>
+                <div class="flex-grow-1 ms-2 ms-sm-3">
+                  <div class="comment-meta d-flex align-items-baseline">
+                    <h6 class="me-2"><a href='/#/user/{{ replay.authorId }}'>{{ replay.author }}</a></h6>
+                  </div>
+                  <div class="comment-body">
+                  {{ replay.msg }}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row justify-content-center mt-5">
+
+              <div class="col-lg-12">
+                <h5 class="comment-title" ng-show="isLoggedIn == true">Leave a Comment</h5>
+                <strong ng-show="isLoggedIn == false">Only Logged In Users can comment.</strong>
+                <div class="row" ng-show="isLoggedIn == true">
+                  <div class="col-12 mb-3">
+                  <div ng-show="isPublished == true" class="alert alert-success">
+                        <strong>Success!</strong> Your comment has been published.
+                        </div>
+
+                    <textarea ng-show="isPublished == false" class="form-control" id="comment-message" ng-model="msg" placeholder="Enter your comment" cols="5" rows="10"></textarea>
+                  </div>
+                  <div class="col-12">
+                    <input ng-show="isPublished == false" type="submit" class="btn btn-primary" ng-click="addComment()" value="Post comment">
+                  </div>
+                  <p></p>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-3">
+
+            <div class="aside-block">
+              <h3 class="aside-title">Categories</h3>
+              <ul class="aside-links list-unstyled" ng-repeat="cat in categories | limitTo:6">
+                <li><a href="/#/category/{{cat._id}}"><i class="bi bi-chevron-right"></i> {{ cat.title }}</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    </main>
